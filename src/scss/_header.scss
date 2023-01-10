@@ -1,3 +1,130 @@
-h1 {
-   color: blue;
+
+.header {
+   background: $primery;
+
+   &__top,
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   
+   &__top {
+      padding-top: 18px;
+   }
+
+   // .header__search
+   &__search {
+      background: $containerColor;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      max-width: 100%;
+      width: 282px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      padding: 11px 16px;
+      border: 1px solid $primery;
+      transition: all .3s ease;
+
+      &:hover {
+         border: 1px solid $secondary;
+
+         .btn-search-icon path{
+            fill: #777;
+         }
+      }
+   }
+
+   .btn-search-icon {
+      background: transparent;
+   }
+
+   .input-search {
+      width: 100%;
+      background: transparent;
+   }
+
+   // .header__tel
+   &__tel {
+      font-weight: 800;
+      font-size: 1.125rem;
+      line-height: 24px;
+      color: #FFFFFF;
+      transition: all .3s ease;
+
+      &:hover {
+         color: $secondary;
+      }
+   }
+
+   .icon-tel path{
+      fill: $secondary;
+   }
+   .icon-tel{
+      margin-right: 7px;
+   }
+
+   &__bottom {
+      padding-top: 7px;
+      align-items: start;
+   }
+
+   .menu {
+      display: flex;
+      align-items: center;
+      height: 65px;
+      gap: 30px;
+
+      &__link {
+         font-weight: 600;
+         font-size: 17px;
+         line-height: 21px;
+         letter-spacing: 0.01em;
+         
+         color: #FFFFFF;
+         transition: all .3s ease;
+
+         &:hover {
+            color: $contantColor;
+         }
+      }
+   }
+
+   &__button {
+      background: $secondary;
+      border-radius: 12px;
+      padding: 9px 22px;
+      display: flex;
+      align-items: center;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+         background: $contantColor;
+
+         .btn-setting-text {
+            color: $containerColor;
+         } 
+
+         .btn-setting-icon path{
+            fill: $containerColor;
+         }
+      }
+
+      .btn-setting-icon {
+         margin-right: 9px;
+      }
+
+      .btn-setting-text {
+         letter-spacing: -0.5px;
+         text-transform: uppercase;
+         font-weight: 800;
+         font-size: 16px;
+         line-height: 26px;
+
+         color: #344265;
+      }
+   }
 }
