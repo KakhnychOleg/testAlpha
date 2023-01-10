@@ -7,8 +7,9 @@
 
 //Block
 @import "header";
+@import "contant";
 
-// @import "footer";
+@import "footer";
 
 
 
@@ -16,6 +17,8 @@
    max-width: $containerWidth;
    margin: 0 auto;
    padding: 0 20px;
+
+   position: relative;
 
    font-family: 'PlusJakartaSans', sans-serif;
 }
