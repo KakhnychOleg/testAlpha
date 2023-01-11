@@ -79,6 +79,11 @@
       }
    }
 }
+@media screen and (max-width: $breakpoint768) {
+   .contant {
+      margin: 48px 0 60px 0;
+   }
+}
 .contant-img {
    position: absolute;
    top: -48px;

@@ -159,7 +159,7 @@
         position: absolute;
         width: 50%;
         height: calc(100vh - 50px);
-        background: #333;
+        background: $contantColor;
         top: 57px;
         left: -120%;
         transition: 0.5s;
@@ -172,6 +172,10 @@
 
          .menu__item {
             padding: 10px;
+         }
+
+         .menu__link {
+            font-size: 20px;
          }
       }
       .menu,

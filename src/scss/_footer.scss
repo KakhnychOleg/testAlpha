@@ -20,6 +20,11 @@
             fill: $secondary;
          }
       }
+      @media screen and (max-width: $breakpoint768){
+         .description {
+            padding-top: 25px;
+         }
+      }
 
       .location {
          font-weight: 500;
@@ -125,6 +130,8 @@
       .footer__links {
          flex-direction: column;
          gap: 15px;
+         align-items: center;
+         margin-bottom: 30px;
       }
    }
 
@@ -134,5 +141,11 @@
       line-height: 17px;
 
       color: $footerColor;
+   }
+}
+
+@media screen and (max-width: $breakpoint768) {
+   .footer {
+      text-align: center;
    }
 }
