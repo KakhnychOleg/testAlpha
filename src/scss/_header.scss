@@ -10,7 +10,13 @@
    }
    
    &__top {
-      padding-top: 18px;
+      padding-top: 16px;
+   }
+   @media (max-width: $breakpoint1024){
+      .header__top {
+         flex-direction: column;
+         gap: 10px;
+      }
    }
 
    // .header__search
@@ -25,7 +31,7 @@
       width: 282px;
       box-sizing: border-box;
       border-radius: 10px;
-      padding: 11px 16px;
+      padding: 9px 16px;
       border: 1px solid $primery;
       transition: all .3s ease;
 
@@ -70,6 +76,13 @@
    &__bottom {
       padding-top: 7px;
       align-items: start;
+      position: relative;
+   }
+
+   @media (max-width: $breakpoint1024){
+      .header__bottom {
+         padding-bottom: 7px;
+      }
    }
 
    .menu {
@@ -90,6 +103,94 @@
          &:hover {
             color: $contantColor;
          }
+      }
+   }
+
+   .menu-toggle {
+      position: relative;
+      bottom: -23px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: #fff;
+      line-height: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+
+      &::after,
+      &::before {
+         position: absolute;
+         left: 0;
+         content: '';
+         width: 30px;
+         height: 2px;
+         background: #fff;
+      }
+
+      &::after {
+         top: 8px;
+      }
+      &::before {
+         top: -8px;
+      }
+   }
+
+   .open {
+      width: 0;
+      transition: all .3s ease;
+   }
+   .open::after,
+   .open::before {
+      top: 0;
+   }
+   .open::before {
+      transform: rotate(45deg);
+   }
+   .open::after{
+      transform: rotate(-45deg);
+   }
+
+   @media (max-width: $breakpoint1024) {
+      .menu-toggle {
+        display: block;
+      }
+      .menu {
+        position: absolute;
+        width: 50%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 57px;
+        left: -120%;
+        transition: 0.5s;
+      }
+      .active {
+         left: -20px;
+         z-index: 99;
+         overflow: hidden;
+         padding-top: 20px;
+
+         .menu__item {
+            padding: 10px;
+         }
+      }
+      .menu,
+      .menu__item {
+        display: block;
+        text-align: center;
+      }
+      .menu__link {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+      }
+   }
+   @media (max-width: $breakpoint768) {
+      .menu {
+         width: 80%;
+      }
+   }
+   @media (max-width: $breakpoint480) {
+      .menu {
+         width: 100%;
       }
    }
 

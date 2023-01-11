@@ -1,1 +1,1 @@
-{"version":3,"file":"main.js","names":[],"sources":[],"mappings":"","sourcesContent":[]}
+{"version":3,"file":"main.js","names":["$","on","toggleClass"],"sources":["main.js"],"sourcesContent":["$(\".menu-toggle\").on(\"click\",(()=>{$(\".menu\").toggleClass(\"active\"),$(\".menu-toggle\").toggleClass(\"open\")}));"],"mappings":"AAAAA,EAAE,gBAAgBC,GAAG,SAAQ,KAAMD,EAAE,SAASE,YAAY,UAAUF,EAAE,gBAAgBE,YAAY,OAAQ"}
